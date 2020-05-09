@@ -1,0 +1,30 @@
+<div class="ui main container">
+	<div class="ui padded grid">
+		<div class="one column row">
+			<div class="left ten wide column">
+				<h2 class="ui header">Live Stock Market News</h2>
+				<div class="ui padded text segment">
+					<div class="ui relaxed divided items">
+						<div class="item" *ngFor="let newsItem of newsList">
+							<div class="content">
+								<a [href]="newsItem.url" [innerHtml]="newsItem.title" target="_blank"></a>
+								<div class="meta">
+									<span [innerHtml]="newsItem.sourceName"></span>
+									<span [innerHtml]="getDate(newsItem.date)"></span>
+								</div>
+								<div class="description">
+									{{ newsItem.description }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right six wide column">
+				<h2 class="ui header">Ideas Stream</h2>
+				<div id="ideasWidget" class="ui padded text segment">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

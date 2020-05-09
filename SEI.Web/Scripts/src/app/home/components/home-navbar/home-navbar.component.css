@@ -1,0 +1,27 @@
+[hidden] {
+  display: none !important;
+}
+
+.ui.dropdown.item.accountLink::before {
+  display: none !important;
+}
+
+.ui.dropdown.item.accountLink i {
+  margin: 0 !important;
+}
+
+.cabinet-menu {
+    border-radius: 0 !important;
+    background-color: #27292A !important;
+    margin-top: 0 !important;
+    padding: 0.4em 1em;
+}
+
+.cabinet-menu-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.ui.dropdown.item {
+    max-width: 3em !important;
+}

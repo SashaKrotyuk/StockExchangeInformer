@@ -1,0 +1,41 @@
+<div class="ui fluid container cabinet-menu-container">
+	<div class="ui inverted segment cabinet-menu">
+		<div class="ui inverted secondary large stackable main menu container">
+			<a class="item" [routerLink]="['/']">
+				<img class="ui mini image" src="/Content/img/logo.png" />
+			</a>
+			<a class="header item" [routerLink]="['/news']" routerLinkActive="active">
+        		News
+			</a>
+			<a class="header item" [routerLink]="['/chart']" routerLinkActive="active">
+        		Live chart
+			</a>
+
+			<!--<div *ngIf="!authService.loggedIn" id="accountSection" class="right item">
+				<app-translate></app-translate>
+			</div>-->
+
+			<!--<div *ngIf="!authService.loggedIn" id="accountSection" class="item">
+				<a id="loginBtn" class="ui inverted button" [routerLink]="['/login']" routerLinkActive="active">
+					{{ 'AMP.COMMON.LAYOUT.LOGIN' | translate }}
+				</a>
+				<a id="registerBtn" class="ui inverted button" [routerLink]="['/register']" routerLinkActive="active">
+					{{ 'AMP.COMMON.LAYOUT.REGISTER' | translate }}
+				</a>
+			</div>
+
+			<div *ngIf="authService.loggedIn" id="accountSection" class="right item">
+				<div class="ui dropdown item accountLink" [routerLink]="['/account']" style="width: 50px" routerLinkActive="active">
+					<i class="user icon"></i>
+				</div>
+				<app-translate></app-translate>
+			</div>
+
+			<div *ngIf="authService.loggedIn" id="accountSection" class="item">
+				<a class="ui inverted button" (click)="logout()">
+					{{ 'AMP.COMMON.LAYOUT.LOGOUT' | translate }}
+				</a>
+			</div>-->
+		</div>
+	</div>
+</div>

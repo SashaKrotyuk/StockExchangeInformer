@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB4AFE23-B2F7-44D4-B775-B305209D7107}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\Clustering\ClusteringData.cs" />
+    <Compile Include="Algorithms\Clustering\ClusteringResult.cs" />
+    <Compile Include="Algorithms\Clustering\IKMeans.cs" />
+    <Compile Include="Algorithms\Clustering\KMeans.cs" />
+    <Compile Include="Algorithms\Cryptography\Contracts\ICryptoService.cs" />
+    <Compile Include="Algorithms\Cryptography\Helpers\SimpleAes.cs" />
+    <Compile Include="Algorithms\Cryptography\Implementations\CryptoService.cs" />
+    <Compile Include="Exceptions\ApplicationAccessDenyException.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Exceptions\HandledException.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\ISerializerExtensions.cs" />
+    <Compile Include="Extensions\LoggerExtenstions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\FileLinkHelper.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="Helpers\ConfigurationManagerHelper.cs" />
+    <Compile Include="Helpers\DownloadHelper.cs" />
+    <Compile Include="Helpers\GenericThrow.cs" />
+    <Compile Include="Helpers\Throw.cs" />
+    <Compile Include="Logging\Contracts\ILogger.cs" />
+    <Compile Include="Logging\Log4Net\Log4NetLogger.cs" />
+    <Compile Include="Logging\Log4Net\Logger.cs" />
+    <Compile Include="Option\Heavy\Implementation\ActionOnNoneNotResolved.cs" />
+    <Compile Include="Option\Heavy\Implementation\ActionOnSomeNotResolved.cs" />
+    <Compile Include="Option\Heavy\Implementation\ActionResolved.cs" />
+    <Compile Include="Option\Heavy\Implementation\MappingOnNoneNotResolved.cs" />
+    <Compile Include="Option\Heavy\Implementation\MappingOnSomeNotResolved.cs" />
+    <Compile Include="Option\Heavy\Implementation\MappingResolved.cs" />
+    <Compile Include="Option\Heavy\Implementation\NoneMatched.cs" />
+    <Compile Include="Option\Heavy\Implementation\NoneMatchedForMapping.cs" />
+    <Compile Include="Option\Heavy\Implementation\NoneNotMatchedAsSome.cs" />
+    <Compile Include="Option\Heavy\Implementation\NoneNotMatchedForMapping.cs" />
+    <Compile Include="Option\Heavy\Implementation\SomeMatched.cs" />
+    <Compile Include="Option\Heavy\Implementation\SomeMatchedForMapping.cs" />
+    <Compile Include="Option\Heavy\Implementation\SomeNotMatched.cs" />
+    <Compile Include="Option\Heavy\Implementation\SomeNotMatchedAsNone.cs" />
+    <Compile Include="Option\Heavy\Implementation\SomeNotMatchedAsNoneForMapping.cs" />
+    <Compile Include="Option\Heavy\Implementation\SomeNotMatchedForMapping.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IActionable.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IFiltered.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IFilteredActionable.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IFilteredMapped.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IFilteredNone.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IFilteredNoneActionable.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IFilteredNoneMapped.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IMapped.cs" />
+    <Compile Include="Option\Heavy\Interfaces\IOption.cs" />
+    <Compile Include="Option\Heavy\Option.cs" />
+    <Compile Include="Option\Light\Option.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\SerializationFormat.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Serialization\Serializers\BinarySerializer.cs" />
+    <Compile Include="Serialization\Serializers\JsonSerializer.cs" />
+    <Compile Include="Serialization\Serializers\NullSerializer.cs" />
+    <Compile Include="Serialization\Serializers\XmlSerializer.cs" />
+    <Compile Include="Threading\IMultiThreadExecutor.cs" />
+    <Compile Include="Threading\MultiThreadExecutor.cs" />
+    <Compile Include="Threading\MultiThreadExecutorOperation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

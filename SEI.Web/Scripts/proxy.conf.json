@@ -1,0 +1,7 @@
+{
+  "**": {
+    "target": "https://sign.sei.web.com/",
+    "secure": false,
+    "server": { "baseDir": "./" } 
+  }
+}
